@@ -1,6 +1,7 @@
 import AVFoundation
 import CoreFoundation
 import CoreVideo
+import CoreAudio
 import VideoToolbox
 
 #if os(iOS)
@@ -22,8 +23,7 @@ final class H264Decoder {
     #if os(iOS)
     static let defaultAttributes: [NSString: AnyObject] = [
         kCVPixelBufferPixelFormatTypeKey: NSNumber(value: kCVPixelFormatType_32BGRA),
-        kCVPixelBufferIOSurfacePropertiesKey: [:] as AnyObject,
-        kCVPixelBufferOpenGLESCompatibilityKey: NSNumber(booleanLiteral: true)
+        kCVPixelBufferIOSurfacePropertiesKey: [:] as AnyObject
     ]
     #else
     static let defaultAttributes: [NSString: AnyObject] = [

@@ -11,8 +11,7 @@ final class VideoIOComponent: IOComponent {
     #else
     static let defaultAttributes: [NSString: NSObject] = [
         kCVPixelBufferPixelFormatTypeKey: NSNumber(value: kCVPixelFormatType_420YpCbCr8BiPlanarVideoRange),
-        kCVPixelBufferMetalCompatibilityKey: kCFBooleanTrue,
-        kCVPixelBufferOpenGLESCompatibilityKey: kCFBooleanTrue
+        kCVPixelBufferMetalCompatibilityKey: kCFBooleanTrue
     ]
     #endif
 
